@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: rgb(0, 0, 0);
+}
+html{
+    overflow: hidden;
+}
+#c000{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#c001{
+    
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    overflow:hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 1;
+    box-shadow: 0px 0px 25px 0px cyan;
+    transition: all 1s;
+}
+#c002{
+    animation-name: gradient;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    width: 40px;
+    height: 400px;
+    background-color: #9dc956;
+    transition: all;
+    margin: 0px 0px;
+    z-index: 2;
+    box-shadow: 0px 0px 50px 20px #c8ff6d;
+    transition: all 1s;
+    opacity: 1;
+
+}
+#c001:hover{
+    box-shadow: 0px 0px 30px 0px #c8ff6d;
+}
+#c001:hover > #c002{
+    background-color: rgb(0, 211, 211);
+    box-shadow: 0px 0px 50px 20px cyan;
+
+}
+#c003:hover{
+    font-size: 30px;
+}
+#c003{
+    display: flex;
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 14px;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    transition: all 2s;
+    cursor: pointer;
+    border-style: none;
+    opacity: 1;
+}
+#c001:active{
+    box-shadow: 0px 0px 400px 1000px rgb(255, 255, 255);
+    background-color: white;
+}
+
+#c003:active{
+    opacity:0;
+}
+#c001:active > #c002{
+    background-color: rgb(0, 211, 211);
+    box-shadow: 0px 0px 50px 20px cyan;
+    opacity: 0;
+}
+/* #c001:hover{
+    background-image: linear-gradient( blue,red);
+} */
+@keyframes gradient{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

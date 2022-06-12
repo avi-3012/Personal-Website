@@ -1,0 +1,51 @@
+#class, .id  {
+    display 
+    position
+    cursor
+    width 
+    height
+    margin 
+    padding 
+    align-items 
+    justify-content 
+    border-radius 
+    border-style 
+    outline-style
+    overflow 
+    z-index 
+    opacity 
+    background-color 
+    color 
+    font-family 
+    font-size
+    box-shadow 
+    animation-name 
+    animation-duration 
+    animation-timing-function 
+    animation-iteration-count
+    animation-fill-mode
+    transition-property 
+    transition-duration 
+    transition
+}
+
+
+
+
+
+
+element{
+    ...
+}
+element:hover{
+    ...
+}
+element:active{
+    ...
+}
+element:focus{
+    ...
+}
+element:target{
+    ...
+}

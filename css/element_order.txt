@@ -1,6 +1,10 @@
 #class, .id  {
     display 
     position
+    top 
+    bottom 
+    left 
+    right 
     cursor
     width 
     height
@@ -8,12 +12,17 @@
     padding 
     align-items 
     justify-content 
-    border-radius 
+    box-sizing
+    border-radius
+    border
     border-style 
     outline-style
     overflow 
     z-index 
     opacity 
+    background-image
+    background-size
+    background-position
     background-color 
     color 
     font-family 

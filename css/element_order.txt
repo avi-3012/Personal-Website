@@ -1,6 +1,7 @@
 #class, .id  {
     display 
     position
+    flex-direction
     top 
     bottom 
     left 
@@ -27,6 +28,8 @@
     color 
     font-family 
     font-size
+    text-decoration
+    text-shadow
     box-shadow 
     animation-name 
     animation-duration 

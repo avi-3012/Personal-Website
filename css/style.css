@@ -177,7 +177,7 @@ html{
     overflow: scroll;
     z-index: 505;
     opacity: 1;
-    background-image: url(/img/mainBg.JPG);
+    background-image: url(../img/mainBg.JPG);
     background-size: cover;
     background-position: center;
 }

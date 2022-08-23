@@ -6,133 +6,7 @@
 html{
     overflow: hidden;
 }
-#c000{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    z-index:500;
-    opacity:1;
-    overflow: scroll;
-    animation-name:anime000;
-    animation-duration:3s;
-    animation-timing-function:ease-in;
-}
-#c001{
-    display: flex;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    border-style: none;
-    overflow:hidden;
-    z-index: 501;
-    background-color: black;
-    box-shadow: 0px 0px 25px 0px #97affa;
-    transition: all 2s;
-}
-
-#c001:hover{
-    box-shadow: 0px 0px 30px 0px #ffbffb;
-}
-
-#c001:target{
-    outline-style: none;
-    background-color: #1b103b;
-    box-shadow: 0px 0px 400px 1000px #1b103b;
-}
-
-#c002{
-    width: 40px;
-    height: 400px;
-    z-index: 502;
-    opacity: 1;
-    background-color: #db93d7;
-    box-shadow: 0px 0px 50px 20px #ffbffb;
-    animation-name: anime002;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    transition-property: background-color, box-shadow, opacity;
-    transition-duration: 2s, 2s, 1s;
-}
-
-#c001:hover > #c002{
-    background-color: #bdc3ce;
-    box-shadow: 0px 0px 50px 20px #ffffff;
-}
-
-#c001:target > #c002{
-    opacity: 0;
-}
-
-#c003{
-    display: flex;
-    position: absolute;
-    cursor: pointer;
-    width: 190px;
-    height: 190px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    border-style: none;
-    z-index: 503;
-    opacity: 1;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-    transition-property: font-size,opacity;
-    transition-duration: 1s,2s;
-}
-
-#c001:hover > #c003{
-    font-size: 30px;
-}
-
-#c001:target > #c003{
-    opacity:0;
-}
-#c003 span{
-    display: flex;
-    width: 190px;
-    height: 190px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-#c001:hover > #c003 span{
-    animation-name: animec003span-hover;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-#c004{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: 0px;
-    width:100%;
-    height: 100%;
-    min-height: 600px;
-    align-items: center;
-    overflow: hidden;
-    z-index: 498;
-    opacity: 0;
-}
-#c004:target{
-    z-index: 504;
-    opacity: 1;
-}
-#c001:target + #c004{
-    animation-name: anime004-1;
-    animation-duration: 2.5s;
-    animation-fill-mode: forwards;
-}
-#c005{
+#navbar{
     position: relative;
     display: flex;
     width: 92%;
@@ -145,18 +19,12 @@ html{
     opacity: 0;
     /* fa8502 */
     background-color: transparent;
-}
-#c004:target #c005{
     animation-name: anime005;
-    animation-duration: 6s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-#c001:target + #c004 #c005{
-    animation-name: anime005;
-    animation-duration: 6s;
-    animation-fill-mode: forwards;
-}
-#c005 a{
+
+#navbar a{
     margin: 0px 10px;
     padding: 0px 10px;
     background-color: transparent;
@@ -166,22 +34,21 @@ html{
     text-decoration: none;
     transition: all 0.5s;
 }
-#c005 a:hover{
-    color:#ffbffb;
+#navbar a:hover{
+    color:#ecddff;
     font-size: 40px;
-    text-shadow: 0 0 20px #ffbffb;
+    text-shadow: 0 0 20px #ecddff;
 }
-#c005 span{
+#navbar span{
     height: 14px;
     border-left: 1px solid #ffbffb;
 }
-#c006{
+#main{
     display: flex;
     position: absolute;
     width: 100%;
     height: 100%;
     min-height: 600px;
-    align-items: center;
     justify-content: center;
     box-sizing: border-box;
     z-index: 505;
@@ -189,18 +56,11 @@ html{
     background-image: url(../img/mainBg.JPG);
     background-size: cover;
     background-position: center;
-}
-#c004:target #c006{
     animation-name: anime006;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-#c001:target + #c004 #c006{
-    animation-name: anime006;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-}
-#c011{
+#home-container{
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -212,18 +72,11 @@ html{
     z-index: 507;
     opacity: 0;
     background-color: transparent;
-}
-#c004:target #c011{
     animation-name: anime011;
-    animation-duration: 6s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-#c001:target + #c004 #c011{
-    animation-name: anime011;
-    animation-duration: 6s;
-    animation-fill-mode: forwards;
-}
-#c011 span{
+#home-container span{
     background-color: transparent;
     color: #dbbfff;
     font-family: 'Acme', sans-serif;
@@ -231,20 +84,20 @@ html{
     text-shadow: 0px 0px 50px #dbbfff;
     transition: all 0.5s;
 }
-#c011 #c012{
+#home-container-text{
     position: absolute;
     margin-top: 100px;
     margin-left: 6%;
 }
-#c011 #c012 #c013{
+#home-container-text-inner{
     margin-top: 100px;
     margin-left: 6%;
 }
-#c011 span:hover #c013{
-    color: #ffaffa;
-    text-shadow: 0px 0px 30px #ffaffa;
+#home-container span:hover #home-container-text-inner{
+    color: #ecddff;
+    text-shadow: 0px 0px 30px #ecddff;
 }
-#c014{
+#home-container-text-more{
     position: absolute;
     margin-left: 6%;
     margin-bottom: 25px;
@@ -256,12 +109,12 @@ html{
     font-size: 33px;
     text-shadow: none;
 }
-#c014 span{
+#home-container-text-more{
     font-family: 'Dancing Script', cursive;
     font-size: 33px;
     text-shadow: none;
 }
-#c015{
+#home-container-text-more-Btn{
     display: flex;
     position: absolute;
     bottom: 0px;
@@ -273,18 +126,11 @@ html{
     z-index: 506;
     opacity: 0;
     background-color: transparent;
-}
-#c004:target #c015{
     animation-name: anime015;
-    animation-duration: 6s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-#c001:target + #c004 #c015{
-    animation-name: anime015;
-    animation-duration: 6s;
-    animation-fill-mode: forwards;
-}
-#c016{
+#knowMoreBtn{
     cursor: pointer;
     width: 125px;
     height: 50px;
@@ -295,7 +141,7 @@ html{
     font-size: 18px;
     transition: all 0.5s;
 }
-#c016:hover{
+#knowMoreBtn:hover{
     box-shadow:0px 0px 20px 0px#dbbfff;
     background-color: #5e275e;
     color:#ffaffa;
@@ -323,22 +169,19 @@ html{
     100%{z-index: 504;background-color: #1b103b;opacity: 1;}
 }
 @keyframes anime005{
-    0%{}
-    75%{opacity: 0; margin-top: 0%;}
+    0%{opacity: 0; margin-top: 0%;}
     100%{opacity: 1;margin-top: 25px;}
 }
+
 @keyframes anime006{
-    0%{}
-    50%{opacity: 0;}
+    0%{opacity: 0;}
     100%{opacity: 1;}
 }
 @keyframes anime011{
-    0%{}
-    75%{opacity: 0; margin-left: -6%;}
+    0%{opacity: 0; margin-left: -6%;}
     100%{opacity: 1; margin-left: 0%;}
 }
 @keyframes anime015{
-    0%{}
-    75%{opacity: 0; margin-bottom: -6%;}
+    0%{opacity: 0; margin-bottom: -6%;}
     100%{opacity: 1; margin-left: 0%;}
 }
